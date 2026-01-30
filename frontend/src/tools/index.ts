@@ -41,6 +41,17 @@ export const REGISTERED_TOOLS: Tool[] = [
       return { default: module.FileHasher as React.ComponentType<unknown> };
     },
   },
+  {
+    id: 'image-watermark',
+    name: '图片水印工具',
+    icon: '⏰',
+    description: '为图片添加时间水印，支持拖动位置和自定义样式',
+    category: 'media',
+    component: async () => {
+      const module = await import('./ImageWatermark');
+      return { default: module.ImageWatermark as React.ComponentType<unknown> };
+    },
+  },
 ];
 
 // 工具注册表
