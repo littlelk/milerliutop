@@ -1,0 +1,128 @@
+.tool-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 返回按钮 */
+.tool-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.tool-page__back:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* 工具头部 */
+.tool-page__header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  margin-bottom: 30px;
+}
+
+.tool-page__icon {
+  font-size: 48px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tool-page__info h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.tool-page__info p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+/* 工具内容 */
+.tool-page__content {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* 加载状态 */
+.tool-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.tool-loading__spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--bg-secondary);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 未找到 */
+.tool-page__not-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.tool-page__not-found h2 {
+  margin: 0 0 20px 0;
+  color: var(--text-primary);
+}
+
+.tool-page__not-found button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .tool-page__header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tool-page__info h1 {
+    font-size: 24px;
+  }
+}

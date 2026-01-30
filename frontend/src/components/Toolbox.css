@@ -1,0 +1,122 @@
+.toolbox {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* 头部 */
+.toolbox__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.toolbox__header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 10px 0;
+}
+
+.toolbox__header p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* 分类筛选 */
+.toolbox__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+}
+
+.category-btn {
+  padding: 10px 18px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  background: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-secondary);
+}
+
+.category-btn:hover {
+  border-color: var(--category-color, var(--primary-color));
+  color: var(--category-color, var(--primary-color));
+}
+
+.category-btn.active {
+  background: var(--category-color, var(--primary-color));
+  color: white;
+  border-color: var(--category-color, var(--primary-color));
+}
+
+/* 工具分类区域 */
+.toolbox__section {
+  margin-bottom: 40px;
+}
+
+.toolbox__section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--bg-secondary);
+}
+
+.toolbox__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 16px;
+}
+
+.toolbox__list > div {
+  cursor: pointer;
+}
+
+/* 空状态 */
+.toolbox__empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.empty-icon {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.toolbox__empty h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+.toolbox__empty p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .toolbox__list {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbox__categories {
+    padding: 15px;
+  }
+
+  .category-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
